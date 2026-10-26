@@ -129,3 +129,23 @@ def classificar_pedido(subtotal):
     return tipo_de_pedido
 
 tipo_de_pedido = classificar_pedido(subtotal)
+
+#função desconto
+
+def calcular_desconto(subtotal, cupom,tipo_de_pedido):
+
+    if cupom == "sim":
+        if tipo_de_pedido == "Pedido pequeno":
+            return subtotal*0.05
+        elif tipo_de_pedido == "Pedido médio" :
+            return subtotal*0.1
+        elif tipo_de_pedido == "Pedido grande":
+            return subtotal*0.15
+    if cupom == "nao":
+        if tipo_de_pedido == "Pedido pequeno":
+            return 0
+        elif tipo_de_pedido == "Pedido médio" :
+            return subtotal*0.05
+        elif tipo_de_pedido == "Pedido grande":
+            return subtotal*0.10
+    return 0
