@@ -45,3 +45,8 @@ def validar_item(produto, quantidade, cardapio):
     if produto not in cardapio or quantidade <= 0:
         return False
     return True
+
+# calcula o subtotal
+
+def calcular_subtotal(quantidade, preco_unitario):
+    return quantidade * preco_unitario
