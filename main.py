@@ -37,3 +37,11 @@ patternpedido = [
     {**item, "produto": item["produto"].lower()} 
     for item in pedido
 ]
+
+# verifica se o item existe no cardápio
+
+def validar_item(produto, quantidade, cardapio):
+
+    if produto not in cardapio or quantidade <= 0:
+        return False
+    return True
