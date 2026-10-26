@@ -115,3 +115,17 @@ def pedido_feito(lista_pedido, dicionario_cardapio):
 # execução da função pedido feito
 
 itens, subtotal, linhas, unidades = pedido_feito(patternpedido, patterncardapio)
+
+# função de classificar pedido
+
+def classificar_pedido(subtotal):
+    pedido = subtotal
+    if pedido <= 50:
+        tipo_de_pedido = "Pedido pequeno"
+    elif pedido <= 100:
+        tipo_de_pedido = "Pedido médio" 
+    else:
+        tipo_de_pedido = "Pedido grande"
+    return tipo_de_pedido
+
+tipo_de_pedido = classificar_pedido(subtotal)
