@@ -149,3 +149,9 @@ def calcular_desconto(subtotal, cupom,tipo_de_pedido):
         elif tipo_de_pedido == "Pedido grande":
             return subtotal*0.10
     return 0
+
+# desconto total
+
+descontototal = calcular_desconto(subtotal,patterncupom,tipo_de_pedido)
+
+total = subtotal - descontototal
