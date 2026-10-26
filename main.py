@@ -155,3 +155,31 @@ def calcular_desconto(subtotal, cupom,tipo_de_pedido):
 descontototal = calcular_desconto(subtotal,patterncupom,tipo_de_pedido)
 
 total = subtotal - descontototal
+
+# função para exibir o resumo do pedido
+
+def exibir_resumo():
+    print("\n--- Resumo do Pedido ---")
+
+    print("\nItens Válidos:")
+
+
+    for item in itens:
+        
+        # formata o produto, quantidade e subtotal 
+
+        print(f"Produto: {item['produto'].title()} | Quantidade: {item['quantidade']} | Subtotal: R$ {item['subtotal']:.2f}")
+
+    print(f"Número de Linhas Válidas: {linhas}")
+    print(f"Total de Unidades: {unidades}")
+
+
+    print("\nCliente:",nome)
+    print("Tipo de pedido:",tipo_de_pedido)
+    print(f"Subtotal do Pedido: R$ {subtotal:.2f}")
+    print(f"Desconto: R$ {descontototal:.2f}")
+    print(f"Total: R$ {total:.2f}")
+
+# exibe o resumo do pedido
+
+exibir_resumo()
