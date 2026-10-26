@@ -50,3 +50,68 @@ def validar_item(produto, quantidade, cardapio):
 
 def calcular_subtotal(quantidade, preco_unitario):
     return quantidade * preco_unitario
+
+# função pedido
+
+def pedido_feito(lista_pedido, dicionario_cardapio):
+    itens_validos = []
+    subtotal_pedido = 0.0
+    linhas_validas = 0
+    total_unidades = 0
+    
+    print("--- Verificação dos Itens ---")
+    for item in lista_pedido:
+        produto_nome = item["produto"].lower().strip()
+        quantidade = item["quantidade"]
+        
+        # valida o item
+
+        if not validar_item(produto_nome, quantidade, dicionario_cardapio):
+            erros_do_item = []
+            
+            # verifica a existência no cardápio
+
+            if produto_nome not in dicionario_cardapio:
+                erros_do_item.append("produto não existe no cardápio")
+                
+            # verifica quantidade válida
+
+            if quantidade <= 0:
+                erros_do_item.append(f"quantidade inválida ({quantidade})")
+
+            # mostra todos os erros do item inválido
+            
+            motivos = " e ".join(erros_do_item)
+            print(f"Item Inválido: '{item['produto']}' Motivo: {motivos}.")
+            continue
+            
+        # consulta o preço e calcula subtotal
+
+        preco_unitario = dicionario_cardapio[produto_nome]
+        subtotal_item = calcular_subtotal(quantidade, preco_unitario)
+        
+        # acumula os totais globais do pedido
+
+        subtotal_pedido += subtotal_item
+        linhas_validas += 1
+        total_unidades += quantidade
+        
+        # adiciona o item na lista com seu subtotal calculado
+
+        itens_validos.append({
+            "produto": produto_nome,
+            "quantidade": quantidade,
+            "subtotal": subtotal_item
+        })
+    
+    # verifica a existência de itens válidos no pedido
+
+    if linhas_validas == 0:
+        print("Pedido sem itens válidos")
+        return [], 0.0, 0, 0
+        
+    return itens_validos, subtotal_pedido, linhas_validas, total_unidades
+
+# execução da função pedido feito
+
+itens, subtotal, linhas, unidades = pedido_feito(patternpedido, patterncardapio)
