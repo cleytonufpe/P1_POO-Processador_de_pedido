@@ -1,0 +1,179 @@
+Teste 1
+
+--- Verificação dos Itens ---
+Item Inválido: 'pizza' Motivo: produto não existe no cardápio.
+Item Inválido: 'agua' Motivo: quantidade inválida (0).
+
+--- Resumo do Pedido ---
+
+Itens Válidos:
+Produto: Hamburguer | Quantidade: 2 | Subtotal: R$ 50.00
+Produto: Batata | Quantidade: 1 | Subtotal: R$ 12.00
+Produto: Suco | Quantidade: 3 | Subtotal: R$ 24.00
+Número de Linhas Válidas: 3
+Total de Unidades: 6
+
+Cliente: Felipe
+Tipo de pedido: Pedido médio
+Subtotal do Pedido: R$ 86.00
+Desconto: R$ 8.60
+Total: R$ 77.40
+
+
+Teste 2
+
+--- Verificação dos Itens ---
+Item Inválido: 'pizza' Motivo: produto não existe no cardápio.
+Item Inválido: 'agua' Motivo: quantidade inválida (0).
+
+--- Resumo do Pedido ---
+
+Itens Válidos:
+Produto: Hamburguer | Quantidade: 2 | Subtotal: R$ 50.00
+Produto: Batata | Quantidade: 1 | Subtotal: R$ 12.00
+Produto: Suco | Quantidade: 3 | Subtotal: R$ 24.00
+Número de Linhas Válidas: 3
+Total de Unidades: 6
+
+Cliente: Felipe
+Tipo de pedido: Pedido médio
+Subtotal do Pedido: R$ 86.00
+Desconto: R$ 4.30
+Total: R$ 81.70
+
+
+Teste 3
+
+--- Verificação dos Itens ---
+
+--- Resumo do Pedido ---
+
+Itens Válidos:
+Produto: Hamburguer | Quantidade: 2 | Subtotal: R$ 50.00
+Número de Linhas Válidas: 1
+Total de Unidades: 2
+
+Cliente: Felipe
+Tipo de pedido: Pedido pequeno
+Subtotal do Pedido: R$ 50.00
+Desconto: R$ 0.00
+Total: R$ 50.00
+
+
+Teste 4 
+
+--- Verificação dos Itens ---
+
+--- Resumo do Pedido ---
+
+Itens Válidos:
+Produto: Hamburguer | Quantidade: 2 | Subtotal: R$ 50.01
+Número de Linhas Válidas: 1
+Total de Unidades: 2
+
+Cliente: Felipe
+Tipo de pedido: Pedido médio
+Subtotal do Pedido: R$ 50.01
+Desconto: R$ 2.50
+Total: R$ 47.51
+
+
+Teste 5
+
+--- Verificação dos Itens ---
+
+--- Resumo do Pedido ---
+
+Itens Válidos:
+Produto: Hamburguer | Quantidade: 2 | Subtotal: R$ 100.00
+Número de Linhas Válidas: 1
+Total de Unidades: 2
+
+Cliente: Felipe
+Tipo de pedido: Pedido médio
+Subtotal do Pedido: R$ 100.00
+Desconto: R$ 5.00
+Total: R$ 95.00
+
+
+Teste 6
+
+--- Verificação dos Itens ---
+
+--- Resumo do Pedido ---
+
+Itens Válidos:
+Produto: Hamburguer | Quantidade: 2 | Subtotal: R$ 100.01
+Número de Linhas Válidas: 1
+Total de Unidades: 2
+
+Cliente: Felipe
+Tipo de pedido: Pedido grande
+Subtotal do Pedido: R$ 100.01
+Desconto: R$ 10.00
+Total: R$ 90.01
+
+
+Teste 7
+
+--- Verificação dos Itens ---
+Pedido sem itens válidos
+
+--- Resumo do Pedido ---
+
+Itens Válidos:
+Número de Linhas Válidas: 0
+Total de Unidades: 0
+
+Cliente: Felipe
+Tipo de pedido: Pedido pequeno
+Subtotal do Pedido: R$ 0.00
+Desconto: R$ 0.00
+Total: R$ 0.00
+
+
+Teste 8
+
+--- Verificação dos Itens ---
+Item Inválido: 'hamburguer' Motivo: quantidade inválida (0).
+Item Inválido: 'batata' Motivo: quantidade inválida (0).
+Item Inválido: 'suco' Motivo: quantidade inválida (0).
+Item Inválido: 'pizza' Motivo: produto não existe no cardápio e quantidade inválida (0).
+Item Inválido: 'agua' Motivo: quantidade inválida (0).
+Pedido sem itens válidos
+
+--- Resumo do Pedido ---
+
+Itens Válidos:
+Número de Linhas Válidas: 0
+Total de Unidades: 0
+
+Cliente: Felipe
+Tipo de pedido: Pedido pequeno
+Subtotal do Pedido: R$ 0.00
+Desconto: R$ 0.00
+Total: R$ 0.00
+
+
+Teste 9 
+
+--- Verificação dos Itens ---
+Item Inválido: 'hamburguer' Motivo: quantidade inválida (-2).
+Item Inválido: 'pizza' Motivo: produto não existe no cardápio.
+Item Inválido: 'agua' Motivo: quantidade inválida (0).
+
+--- Resumo do Pedido ---
+
+Itens Válidos:
+Produto: Batata | Quantidade: 1 | Subtotal: R$ 12.00
+Produto: Suco | Quantidade: 3 | Subtotal: R$ 24.00
+Produto: Batata | Quantidade: 1 | Subtotal: R$ 12.00
+Produto: Suco | Quantidade: 3 | Subtotal: R$ 24.00
+Número de Linhas Válidas: 4
+Total de Unidades: 8
+
+Cliente: Felipe
+Tipo de pedido: Pedido médio
+Subtotal do Pedido: R$ 72.00
+Desconto: R$ 7.20
+Total: R$ 64.80
